@@ -9,6 +9,7 @@ app.use(express.urlencoded({ extended: false }))
 //添加用户
 app.post('/add', function (req, res) {
   fs.readFile(path.resolve(__dirname, './users.json'), 'utf8', function (err, data) {
+    console.log(data)
     data = JSON.parse(data);
     data["userlist"].push({
       "id": 4,
@@ -22,8 +23,8 @@ app.post('/add', function (req, res) {
 //TODO：请补全获取用户列表代码
 
 
-app.listen(8080, function () {
-  console.log("访问地址:http://localhost:8080")
+app.listen(9999, function () {
+  console.log("访问地址:http://localhost:9999")
 })
 
 module.exports = app;
