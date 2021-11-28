@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>个人所得税计算器</title>
+    <link rel="stylesheet" href="bootstrap.min.css" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+        <h3>个人所得税计算器</h3>
+        <div>
+            <h5>规则</h5>
+            <ol>
+                <li>薪资小于等于5000元，则无需缴税</li>
+                <li>薪资大于5000元且小于等于9000，税率为3%</li>
+                <li>薪资大于9000元且小于等于15000，税率为5%</li>
+                <li>薪资大于15000，税率为10%</li>
+            </ol>
+        </div>  
+        <input type="number" required class="form-control" style="width: 50%;" id="salary" placeholder="请输入您的工资">
+        <button type="submit" class="btn btn-primary" id="btnsubmit">计算</button>
+        <p>您需要缴税<span id="val">0</span>元</p>  
+       
+    </div>
+  
+</body>
+<script type="text/javascript" src="index.js"></script>
+<script>
+    document.getElementById("btnsubmit").onclick = function() {
+        var salary = document.getElementById("salary").value; //薪资
+        if (salary <= 0) {
+            alert("薪资不能为0或小于0");
+            return false;
+        }
+        var result = cal(parseInt(salary));
+        document.getElementById("val").innerText = result;
+    };
+</script>
+
+</html>

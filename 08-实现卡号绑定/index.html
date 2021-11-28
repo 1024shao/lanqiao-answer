@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卡号绑定</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/index.js"></script>
+</head>
+
+<body>
+    <div id="tip1" class="alert alert-primary alert-dismissible fade" role="alert">
+        <strong>成功!</strong> 绑定成功.
+    </div>
+    <div id="tip2" class="alert alert-warning alert-dismissible fade" role="alert">
+        <strong>失败!</strong> 绑定失败.
+    </div>
+    <div class="container card mt-3">
+        <form>
+            <h3 class="text-center pt-3">卡号绑定</h3>
+            <div class="mb-3">
+                <label for="exampleInputCardno" class="form-label">卡号</label>
+                <input type="text" required class="form-control" id="exampleInputCardno">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword" class="form-label">密码</label>
+                <input type="password" required class="form-control" id="exampleInputPassword">
+            </div>
+            <button type="button" id="btnsubmit" class="btn btn-primary mb-3">确定</button>
+        </form>
+    </div>
+</body>
+
+</html>
