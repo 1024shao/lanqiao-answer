@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>用户注册</title>
+    <link rel="stylesheet" href="bootstrap.min.css" type="text/css" />
+  
+  </head>
+  <body>
+    <div class="container">
+      <h3>用户注册</h3>
+    <form id="userForm" action="handle.html" method="get">
+      用户名: <input type="text" id="username" required class="form-control" style="width: 50%;" />  <div id="msg1"></div>
+      邮箱：<input type="text" id="email" required class="form-control" style="width: 50%;" /> <div id="msg2"></div>
+      手机号: <input type="text" id="phoneNumber" required class="form-control" style="width: 50%;" /> <div id="msg3"></div>
+      <input id="btn1" type="button"  class="btn btn-primary"  value="提交" />
+    </form>
+  </div>
+  <script src="index.js"></script>
+  <script>
+    window.onload = function () {
+    var userForm = document.getElementById("userForm");
+    var usernameText = document.getElementById("username");
+    var emailText = document.getElementById("email");
+    var phoneNumberText = document.getElementById("phoneNumber");
+    btn1.onclick = function () {
+      var username = usernameText.value;
+      var email = emailText.value;
+      var phoneNumber = phoneNumberText.value;
+
+      if (trim(username) == "") {
+        // 显示用户名不能为空 不提交表单
+        document.getElementById("msg1").innerHTML = '<b style="color:red;">用户名不能为空</b>';
+      } else if (!isEmail(email)) {
+        document.getElementById("msg1").innerHTML ="";
+        document.getElementById("msg2").innerHTML = '<b style="color:red;">邮箱格式不正确</b>';
+      } else if (!isPhone(phoneNumber)) {
+        document.getElementById("msg2").innerHTML ="";
+        document.getElementById("msg3").innerHTML = '<b style="color:red;">手机号格式不正确</b>';
+      } else {
+        document.getElementById("msg3").innerHTML ="";
+        // 提交表单
+        userForm.submit();
+      }
+    };
+  };
+    </script>
+  </body>
+</html>
