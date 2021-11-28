@@ -1,150 +1,264 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
 
+
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>骰子布局</title>
-    <style>
-        body {
-            margin: 10px 0 0 0;
-            display: flex;
-            justify-content: space-around;
-        }
-        
-        body>div {
-            display: flex;
-            width: 100px;
-            height: 100px;
-            border-radius: 4px;
-            border: 2px solid red;
-            box-sizing: border-box;
-        }
-        
-        p {
-            width: 15px;
-            height: 15px;
-            background-color: black;
-            border-radius: 50%;
-            margin: 2px;
-        }
-        
-        .div1 {
-            justify-content: center;
-            align-items: center;
-        }
-        /*todo:请补全剩余骰子布局代码*/
-    </style>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>骰子布局</title>
+
+  <style>
+    body {
+      margin: 10px 0 0 0;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    body>div {
+      display: flex;
+      width: 100px;
+      height: 100px;
+      border-radius: 4px;
+      border: 2px solid red;
+      box-sizing: border-box;
+    }
+
+    p {
+      width: 15px;
+      height: 15px;
+      background-color: black;
+      border-radius: 50%;
+      margin: 2px;
+    }
+
+    /*
+      考察知识点：flex布局
+        记住一句话少年，flex是最最万能的布局,如果你还不会flex布局赶紧去学吧~() 我这里只做最基本的介绍
+      开启flex布局：
+        父组件： display：flex
+      父组件几个常用的属性：
+        justify-content: (center/space-around/space-between/flex-end/flex-start)
+        算了算了,太多了,我写在同目录下的md文档里了....(写的不是特别全)
+    */
+    .div1 {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .div2 {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .div3 {
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .div3 p:nth-child(1) {
+      align-self: flex-start;
+    }
+
+    .div3 p:nth-child(3) {
+      align-self: flex-end;
+    }
+
+    .div4 {
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    .div4 div {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .div5 {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .div5 div {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .div6 {
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    .div6 div {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .div7 {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .div7 div {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .div7 div:nth-child(2) {
+      display: flex;
+      justify-content: center;
+    }
+
+    .div8 {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .div8 div {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .div8 div:nth-child(2) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .div9 {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .div9 div {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+
 </head>
 
 <body>
-    <!--骰子1-->
-    <div class="div1">
-        <p></p>
-    </div>
-    <!--骰子2-->
+
+  <!--骰子1-->
+
+  <div class="div1">
+    <p></p>
+  </div>
+
+  <!--骰子2-->
+
+  <div class="div2">
+    <p></p>
+    <p></p>
+  </div>
+  <!--骰子3-->
+
+  <div class="div3">
+    <p></p>
+    <p></p>
+    <p></p>
+  </div>
+  <!--骰子4-->
+
+  <div class="div4">
     <div>
-        <p></p>
-        <p></p>
+      <p></p>
+      <p></p>
     </div>
-    <!--骰子3-->
     <div>
-        <p></p>
-        <p></p>
-        <p></p>
+      <p></p>
+      <p></p>
     </div>
-    <!--骰子4-->
+  </div>
+
+  <!--骰子5-->
+  <div class="div5">
     <div>
-        <div>
-            <p></p>
-            <p></p>
-        </div>
-        <div>
-            <p></p>
-            <p></p>
-        </div>
+      <p></p>
+      <p></p>
     </div>
-    <!--骰子5-->
     <div>
-        <div>
-            <p></p>
-            <p></p>
-        </div>
-        <div>
-            <p></p>
-        </div>
-        <div>
-            <p></p>
-            <p></p>
-        </div>
+      <p></p>
     </div>
-    <!--骰子6-->
     <div>
-        <div>
-            <p></p>
-            <p></p>
-        </div>
-        <div>
-            <p></p>
-            <p></p>
-        </div>
-        <div>
-            <p></p>
-            <p></p>
-        </div>
+      <p></p>
+      <p></p>
     </div>
-    <!--骰子7-->
+  </div>
+
+  <!--骰子6-->
+  <div class="div6">
     <div>
-        <div>
-            <p></p>
-            <p></p>
-            <p></p>
-        </div>
-        <div>
-            <p></p>
-        </div>
-        <div>
-            <p></p>
-            <p></p>
-            <p></p>
-        </div>
+      <p></p>
+      <p></p>
     </div>
-    <!--骰子8-->
     <div>
-        <div>
-            <p></p>
-            <p></p>
-            <p></p>
-        </div>
-        <div>
-            <p></p>
-            <p></p>
-        </div>
-        <div>
-            <p></p>
-            <p></p>
-            <p></p>
-        </div>
+      <p></p>
+      <p></p>
     </div>
-    <!--骰子9-->
     <div>
-        <div>
-            <p></p>
-            <p></p>
-            <p></p>
-        </div>
-        <div>
-            <p></p>
-            <p></p>
-            <p></p>
-        </div>
-        <div>
-            <p></p>
-            <p></p>
-            <p></p>
-        </div>
+      <p></p>
+      <p></p>
     </div>
+  </div>
+
+  <!--骰子7-->
+  <div class="div7">
+    <div>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+    <div>
+      <p></p>
+    </div>
+    <div>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+  </div>
+
+  <!--骰子8-->
+  <div class="div8">
+    <div>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+    <div>
+      <p></p>
+      <p></p>
+    </div>
+    <div>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+  </div>
+  <!--骰子9-->
+  <div class="div9">
+    <div>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+    <div>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+    <div>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+  </div>
 </body>
 
 </html>
