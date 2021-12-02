@@ -28,11 +28,7 @@ export default {
 
   methods: {
     loadListData: function() {
-      axios({
-        url: 'static/data/list.json',
-
-        method: 'get',
-      }).then((res) => {
+      axios.get('static/data/list.json').then((res) => {
         if (res.data.status === 'success') {
           this.dataList = res.data.data.listInfo
         }
